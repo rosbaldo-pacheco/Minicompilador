@@ -18,7 +18,7 @@ import javax.swing.JFileChooser;
 
 /**
  *
- * @author Charly Ponce
+ * @Osba Pacheco
  */
 public class FrmPrincipal extends javax.swing.JFrame {
 
@@ -125,8 +125,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 case P_coma:
                     resultado += "  <Punto y coma>\t" + lexer.lexeme + "\n";
                     break;
-                case Identificador:
-                    resultado += "  <Identificador>\t\t" + lexer.lexeme + "\n";
+                case palabra_reservada:
+                    resultado += "  <palabra_reservada>\t\t" + lexer.lexeme + "\n";
                     break;
                 case Numero:
                     resultado += "  <Numero>\t\t" + lexer.lexeme + "\n";
@@ -166,7 +166,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Analizador Lexico", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "Analizador Lexico", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18))); // NOI18N
 
         btnArchivo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnArchivo.setText("Abrir archivo");
@@ -194,7 +194,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         });
 
         btnLimpiarLex.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnLimpiarLex.setText("Limpiar");
+        btnLimpiarLex.setText("Borrar");
         btnLimpiarLex.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLimpiarLexActionPerformed(evt);
@@ -236,7 +236,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Analizador Sintactico", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(41, 43, 45)), "Analizador Sintactico", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18))); // NOI18N
 
         txtAnalizarSin.setEditable(false);
         txtAnalizarSin.setColumns(20);
@@ -252,7 +252,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         });
 
         btnLimpiarSin.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnLimpiarSin.setText("Limpiar");
+        btnLimpiarSin.setText("Borrar");
         btnLimpiarSin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLimpiarSinActionPerformed(evt);
@@ -266,11 +266,11 @@ public class FrmPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(btnAnalizarSin)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnLimpiarSin))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 567, Short.MAX_VALUE)
+                        .addComponent(btnLimpiarSin))
+                    .addComponent(jScrollPane3)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -279,9 +279,9 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAnalizarSin)
                     .addComponent(btnLimpiarSin))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(12, 12, 12))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
